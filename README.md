@@ -2,7 +2,7 @@
 
 source code of themes for web page generator
 
-![screenshot](img/screenshots.png)
+![screenshot](./static/img/screenshots.png)
 
 ## Contents
 
