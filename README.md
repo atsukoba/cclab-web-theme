@@ -2,6 +2,8 @@
 
 source code of themes for web page generator
 
+![screenshot](img/screenshots.png)
+
 ## Contents
 
 - About
