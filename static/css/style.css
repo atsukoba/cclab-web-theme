@@ -66,7 +66,7 @@ body {
 .header {
   width: 100vw;
   height: 60px;
-  position: absolute;
+  position: fixed;
   z-index: 10000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,7 +171,7 @@ body {
 
 nav.sp {
   left: 0;
-  position: absolute;
+  position: fixed;
   opacity: 1;
   width: 100vw;
   padding: 15px;
@@ -210,7 +210,6 @@ nav.sp ul li a {
   color: #DBEEEA;
   font-size: 1.25rem;
   font-family: "Roboto", sans-serif;
-  font-weight: lighter;
 }
 
 nav.sp div {
@@ -238,16 +237,27 @@ nav.sp.inactive {
   opacity: 0;
 }
 
-section {
+section:not(.top) {
   width: 100vw;
   padding-top: 60px;
+  background-image: url("../img/logo_bg.svg");
+  background-repeat: repeat;
+  background-position: 20px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
-section h1 {
+section:not(.top) .section-wrapper {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-top: 2rem;
+}
+
+section:not(.top) h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 2rem;
-  margin: 2rem 0;
+  margin: 0 0 2rem;
 }
 
 section.top .key_visual {
