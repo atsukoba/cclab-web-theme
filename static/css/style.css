@@ -1,67 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic:300,400|Roboto:100,300,400&display=swap&subset=japanese");
-@-webkit-keyframes left_c {
-  0% {
-    stroke-dashoffset: 2000;
-    fill: transparent;
-    opacity: 0;
-  }
-  50% {
-    stroke-dashoffset: 1500;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #333;
-    opacity: .4;
-  }
-}
-@keyframes left_c {
-  0% {
-    stroke-dashoffset: 2000;
-    fill: transparent;
-    opacity: 0;
-  }
-  50% {
-    stroke-dashoffset: 1500;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #333;
-    opacity: .4;
-  }
-}
-
-@-webkit-keyframes right_c {
-  0% {
-    stroke-dashoffset: 2000;
-    fill: transparent;
-  }
-  50% {
-    stroke-dashoffset: 1500;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #333;
-  }
-}
-
-@keyframes right_c {
-  0% {
-    stroke-dashoffset: 2000;
-    fill: transparent;
-  }
-  50% {
-    stroke-dashoffset: 1500;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #333;
-  }
-}
-
 body {
   color: #121212;
   font-family: "Sawarabi Gothic", sans-serif;
@@ -76,6 +13,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 0 15px;
+  border-bottom: solid 0.5px #DBEEEA;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -83,6 +21,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #121212;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 0 30px;
+  }
 }
 
 .header__logo {
@@ -183,6 +127,7 @@ nav.sp {
   opacity: 1;
   width: 100vw;
   padding: 15px;
+  border-bottom: solid 0.5px #DBEEEA;
   overflow: hidden;
   z-index: 10;
   background-color: #121212;
@@ -229,7 +174,7 @@ nav.sp div {
 
 nav.sp div .menu_img {
   height: 100%;
-  opacity: .125;
+  opacity: .25;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
   -webkit-transition-timing-function: ease-out;
@@ -245,14 +190,21 @@ nav.sp.inactive {
   opacity: 0;
 }
 
+section {
+  padding-bottom: 40px;
+  min-height: 100vh;
+}
+
 section:not(.top) {
   width: 100vw;
   padding-top: 60px;
   background-image: url("../img/logo_bg.svg");
   background-repeat: repeat;
   background-position: 20px;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
 }
 
 section:not(.top) .section-wrapper {
@@ -271,11 +223,13 @@ section:not(.top) h1 {
 section.top .key_visual {
   width: 100vw;
   position: relative;
-  height: calc(100vh - 60px);
+  height: 100vh;
   display: table-cell;
   margin: 0;
   text-align: center;
   vertical-align: middle;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
 }
 
 section.top .key_visual svg {
@@ -355,6 +309,11 @@ section.top .key_visual img {
   }
 }
 
+section.top .key_visual_2 {
+  width: 100vw;
+  height: calc(100vw - 60px);
+}
+
 section.news article {
   font-family: "Sawarabi Gothic", sans-serif;
   margin-bottom: 60px;
@@ -374,6 +333,12 @@ section.news article div.eyecatch {
   margin: 0 0 20px;
 }
 
+@media (min-width: 768px) {
+  section.news article div.eyecatch {
+    max-width: 50vw;
+  }
+}
+
 section.news article div.eyecatch img {
   width: 100%;
 }
@@ -387,5 +352,69 @@ section.contact iframe {
 a.disabled {
   pointer-events: none;
   opacity: .2;
+}
+
+@-webkit-keyframes left_c {
+  0% {
+    stroke-dashoffset: 2000;
+    fill: transparent;
+    opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 1500;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #121212;
+    opacity: .4;
+  }
+}
+
+@keyframes left_c {
+  0% {
+    stroke-dashoffset: 2000;
+    fill: transparent;
+    opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 1500;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #121212;
+    opacity: .4;
+  }
+}
+
+@-webkit-keyframes right_c {
+  0% {
+    stroke-dashoffset: 2000;
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 1500;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #121212;
+  }
+}
+
+@keyframes right_c {
+  0% {
+    stroke-dashoffset: 2000;
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 1500;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #121212;
+  }
 }
 /*# sourceMappingURL=style.css.map */

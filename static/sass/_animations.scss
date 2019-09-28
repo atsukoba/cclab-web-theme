@@ -10,7 +10,7 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #333;
+    fill:  $black;
     opacity: .4;
   }
 }
@@ -26,7 +26,7 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill:#333;
+    fill: $black;
   }
 }
 @keyframes right_c {
@@ -40,7 +40,7 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill:#333;
+    fill: $black;
   }
 }
  
