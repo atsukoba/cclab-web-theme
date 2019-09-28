@@ -6,12 +6,13 @@
     opacity: 0;
   }
   50% {
+    stroke-dashoffset: 1500;
     fill: transparent;
   }
   100% {
     stroke-dashoffset: 0;
     fill: #333;
-    opacity: .35;
+    opacity: .4;
   }
 }
 @keyframes left_c {
@@ -21,12 +22,13 @@
     opacity: 0;
   }
   50% {
+    stroke-dashoffset: 1500;
     fill: transparent;
   }
   100% {
     stroke-dashoffset: 0;
     fill: #333;
-    opacity: .35;
+    opacity: .4;
   }
 }
 
@@ -36,6 +38,7 @@
     fill: transparent;
   }
   50% {
+    stroke-dashoffset: 1500;
     fill: transparent;
   }
   100% {
@@ -50,6 +53,7 @@
     fill: transparent;
   }
   50% {
+    stroke-dashoffset: 1500;
     fill: transparent;
   }
   100% {
@@ -85,10 +89,14 @@ body {
   margin-right: auto;
 }
 
+.header__logo h1 {
+  margin: 0;
+}
+
 .header .nav__button {
   position: relative;
   width: 24px;
-  height: 24px;
+  height: 16px;
 }
 
 @media (min-width: 768px) {
@@ -221,7 +229,7 @@ nav.sp div {
 
 nav.sp div .menu_img {
   height: 100%;
-  opacity: .15;
+  opacity: .125;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
   -webkit-transition-timing-function: ease-out;
@@ -263,7 +271,7 @@ section:not(.top) h1 {
 section.top .key_visual {
   width: 100vw;
   position: relative;
-  height: calc(100vh - 2 * 60px);
+  height: calc(100vh - 60px);
   display: table-cell;
   margin: 0;
   text-align: center;
@@ -282,36 +290,41 @@ section.top .key_visual svg {
   }
 }
 
-section.top .key_visual svg .left_c {
+section.top .key_visual svg path {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+section.top .key_visual svg path.left_c {
   opacity: 0;
 }
 
-section.top .key_visual svg path.c_1 {
+section.top .key_visual svg path.c_6 {
   -webkit-animation: left_c .5s ease-in forwards;
   animation: left_c .5s ease-in forwards;
 }
 
-section.top .key_visual svg path.c_2 {
+section.top .key_visual svg path.c_5 {
   -webkit-animation: left_c  1s ease-in forwards;
   animation: left_c  1s ease-in forwards;
 }
 
-section.top .key_visual svg path.c_3 {
-  -webkit-animation: left_c .5s ease-in forwards;
-  animation: left_c .5s ease-in forwards;
+section.top .key_visual svg path.c_4 {
+  -webkit-animation: left_c 1.5s ease-in forwards;
+  animation: left_c 1.5s ease-in forwards;
 }
 
-section.top .key_visual svg path.c_4 {
+section.top .key_visual svg path.c_3 {
   -webkit-animation: left_c  2s ease-in forwards;
   animation: left_c  2s ease-in forwards;
 }
 
-section.top .key_visual svg path.c_5 {
-  -webkit-animation: left_c .5s ease-in forwards;
-  animation: left_c .5s ease-in forwards;
+section.top .key_visual svg path.c_2 {
+  -webkit-animation: left_c 2.5s ease-in forwards;
+  animation: left_c 2.5s ease-in forwards;
 }
 
-section.top .key_visual svg path.c_6 {
+section.top .key_visual svg path.c_1 {
   -webkit-animation: left_c  3s ease-in forwards;
   animation: left_c  3s ease-in forwards;
 }
@@ -366,6 +379,7 @@ section.news article div.eyecatch img {
 }
 
 section.contact iframe {
+  margin-bottom: 40px;
   filter: invert(90%);
   -webkit-filter: invert(90%);
 }

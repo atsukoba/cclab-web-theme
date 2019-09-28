@@ -45,8 +45,8 @@ body {
   background-color: $black;
   &__logo {
     margin-right: auto;
-    
     h1 {
+      margin: 0;
       img {
   
       }
@@ -58,7 +58,7 @@ body {
     }
     position: relative;
     width: 24px;
-    height: 24px;
+    height: 16px;
     span {
       background-color: $main;
       position: absolute;
@@ -155,7 +155,7 @@ nav.sp {
     right: -65px;
     .menu_img {
       height: 100%;
-      opacity: .15;
+      opacity: .125;
       transition-duration: $nav_duration;
       transition-timing-function: ease-out;
     }
@@ -193,7 +193,7 @@ section.top {
   .key_visual {
     width: 100vw;
     position: relative;
-    height: calc(100vh - 2 * #{$header_height});
+    height: calc(100vh - #{$header_height});
     display: table-cell;
     margin: 0;
     text-align: center;
@@ -205,30 +205,33 @@ section.top {
       @include pc {
         width: 50vw;
       }
-      .left_c {
+      path {
+        animation-delay: .5s;
+      }
+      path.left_c {
         opacity: 0;
       }
-      path.c_1 {
+      path.c_6 {
         -webkit-animation: left_c .5s ease-in forwards;
         animation: left_c .5s ease-in forwards;
       }
-      path.c_2 {
+      path.c_5 {
         -webkit-animation: left_c  1s ease-in forwards;
         animation: left_c  1s ease-in forwards;
       }
-      path.c_3 {
-        -webkit-animation: left_c .5s ease-in forwards;
-        animation: left_c .5s ease-in forwards;
-      }
       path.c_4 {
+        -webkit-animation: left_c 1.5s ease-in forwards;
+        animation: left_c 1.5s ease-in forwards;
+      }
+      path.c_3 {
         -webkit-animation: left_c  2s ease-in forwards;
         animation: left_c  2s ease-in forwards;
       }
-      path.c_5 {
-        -webkit-animation: left_c .5s ease-in forwards;
-        animation: left_c .5s ease-in forwards;
+      path.c_2 {
+        -webkit-animation: left_c 2.5s ease-in forwards;
+        animation: left_c 2.5s ease-in forwards;
       }
-      path.c_6 {
+      path.c_1 {
         -webkit-animation: left_c  3s ease-in forwards;
         animation: left_c  3s ease-in forwards;
       }
@@ -242,6 +245,7 @@ section.top {
         animation: right_c 5s ease-in forwards;
       }
     }
+    // img -> animate.css fadeIn
     img {
       display: block;
       margin: 20px auto 0;
@@ -284,8 +288,9 @@ section.news {
 
 section.contact {
   iframe {
-    filter:invert(90%);
-    -webkit-filter:invert(90%)
+    margin-bottom: 40px;
+    filter: invert(90%);
+    -webkit-filter: invert(90%)
   }
 }
 
