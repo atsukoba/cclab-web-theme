@@ -201,10 +201,15 @@ section:not(.top) {
   background-image: url("../img/logo_bg.svg");
   background-repeat: repeat;
   background-position: 20px;
-  -webkit-transition-duration: 100ms;
-          transition-duration: 100ms;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
+}
+
+@media (min-width: 768px) {
+  section:not(.top) {
+    -webkit-transition-duration: 100ms;
+            transition-duration: 100ms;
+  }
 }
 
 section:not(.top) .section-wrapper {

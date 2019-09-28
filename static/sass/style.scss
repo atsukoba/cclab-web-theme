@@ -183,7 +183,9 @@ section:not(.top) {
   background-image: url("../img/logo_bg.svg");
   background-repeat: repeat;
   background-position: 20px;
-  transition-duration: 100ms;
+  @include pc {
+    transition-duration: 100ms;
+  }
   transition-timing-function: linear;
   .section-wrapper {
     width: 100%;
