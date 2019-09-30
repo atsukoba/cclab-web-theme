@@ -53,3 +53,15 @@ $(document).ready(function(){
     type: 'image'
   });
 });
+
+
+// hamburger menu background image
+var switchInterval = window.setInterval(changeNegPos, 2000);
+switcher = 0;
+function changeNegPos() {
+  var pos = $("nav.sp div.pos");
+  var neg = $("nav.sp div.neg");
+  switcher ^= 1;
+  pos.css("opacity", switcher);
+  neg.css("opacity", 1 - switcher);
+}
