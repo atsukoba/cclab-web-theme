@@ -54,44 +54,45 @@ body {
       }
     }
   }
+  $nav_width: 24px;
   .nav__button {
     @include pc {
       display: none;
     }
     position: relative;
-    width: 24px;
-    height: 16px;
+    width: $nav_width;
+    height: $header_height;
     span {
       background-color: $main;
       position: absolute;
       display: block;
-      width: 24px;
+      width: $nav_width;
       height: 2px;
       transition-duration: $nav_duration;
       transition-timing-function: ease-out;
       
     }
     span:nth-child(1) {
-      top: 0px;
+      top: calc(0px + #{$nav_width});
     }
     span:nth-child(2) {
-      top: 7px;
+      top: calc(7px + #{$nav_width});
     }
     span:nth-child(3) {
-      top: 14px;
+      top: calc(14px + #{$nav_width});
     }
   }
   .nav__button.active {
     span:nth-child(1) {
       transform: rotate(45deg);
-      top: 8px;
+      top: calc(8px + #{$nav_width});
     }
     span:nth-child(2) {
       opacity: 0;
     }
     span:nth-child(3) {
       transform: rotate(-45deg);
-      top: 8px;
+      top: calc(8px + #{$nav_width});
     }
   }
   nav.pc {
@@ -155,7 +156,8 @@ nav.sp {
     position: absolute;
     height: 100%;
     top: 0px;
-    right: -65px;
+    right: -85px;
+    transition-duration: 2000ms;
     .menu_img {
       height: 100%;
       opacity: .25;
