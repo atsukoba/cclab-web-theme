@@ -39,11 +39,11 @@ if (getDevice == "sp") {
 }else {
   $(function() {
     setInterval(() => {
-      posX += 5;
-      posY += 5;
+      posX += 50;
+      posY += 50;
       $("section:not(.top)").css("background-position", `${posX} ${posY}`);
-      console.log(pos)
-    }, 100);
+      console.log(`${posX}, ${posY}`)
+    }, 1000);
   });
 }
 

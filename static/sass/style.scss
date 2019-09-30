@@ -182,9 +182,9 @@ section:not(.top) {
   padding-top: $header_height;
   background-image: url("../img/logo_bg.svg");
   background-repeat: repeat;
-  background-position: 20px;
+  background-position: 0 0;
   @include pc {
-    transition-duration: 100ms;
+    transition-duration: 1000ms;
   }
   transition-timing-function: linear;
   .section-wrapper {
