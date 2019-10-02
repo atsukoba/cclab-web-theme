@@ -1,7 +1,8 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic:300,400|Roboto:100,300,400&display=swap&subset=japanese");
 body {
   color: #121212;
-  font-family: "Sawarabi Gothic", sans-serif;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 
 .header {
@@ -165,22 +166,41 @@ nav.sp ul li a {
   font-family: "Roboto", sans-serif;
 }
 
+nav.sp ul li a i {
+  margin: 0 5px;
+  opacity: .8;
+}
+
 nav.sp div {
   position: absolute;
+  opacity: 0;
+  width: 100%;
   height: 100%;
   top: 0px;
   right: -85px;
-  -webkit-transition-duration: 2000ms;
-          transition-duration: 2000ms;
+  -webkit-transition-duration: 1500ms;
+          transition-duration: 1500ms;
 }
 
 nav.sp div .menu_img {
   height: 100%;
-  opacity: .25;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+}
+
+nav.sp hr {
+  background-color: #DBEEEA;
+}
+
+nav.sp p {
+  font-size: .5rem;
+}
+
+nav.sp p a {
+  color: #DBEEEA;
+  text-decoration: none;
 }
 
 nav.sp.active {
@@ -322,7 +342,7 @@ section.top .key_visual_2 {
 }
 
 section.news article {
-  font-family: "Sawarabi Gothic", sans-serif;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   margin-bottom: 60px;
 }
 
