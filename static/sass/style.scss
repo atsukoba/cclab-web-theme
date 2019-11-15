@@ -204,7 +204,7 @@ section:not(.top) {
     transition-duration: 1000ms;
   }
   transition-timing-function: linear;
-  .section-wrapper {
+  .section-inner-wrapper {
     width: 100%;
     background-color: rgba(255,255,255,0.5);
     padding-top: 2rem;

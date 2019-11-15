@@ -1,5 +1,11 @@
-/*Main*/
+/*base */
 
-main {
+body {
+  color: $black;
+  font-family: $ja;
+}
 
+a.disabled {
+  pointer-events: none;
+  opacity: .2;
 }

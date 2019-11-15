@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="news">
-  <div class="section-wrapper container">
+  <div class="section-inner-wrapper container">
     <h1><?php the_title(); ?></h1>
 
     <!-- 以下コピーして記事追加

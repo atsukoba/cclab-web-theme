@@ -234,7 +234,7 @@ section:not(.top) {
   }
 }
 
-section:not(.top) .section-wrapper {
+section:not(.top) .section-inner-wrapper {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   padding-top: 2rem;
