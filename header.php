@@ -13,20 +13,20 @@
   <title>Computational Creativity Lab.</title>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/ress.css">
-  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/ress.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/animate.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/curtains.min.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/curtains.min.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
 </head>
 
 <body>
   <header class="header">
     <a href="/" class="header__logo">
       <h1>
-        <img src="/img/logo_h.svg" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo_h.svg" alt="">
       </h1>
     </a>
     <div class="nav__button inactive">
@@ -37,19 +37,19 @@
     <nav class="pc">
       <ul>
         <li>
-          <a href="/#about" class="disabled">About</a>
+          <a href="<?php echo esc_url(home_url('/#about')); ?>" class="disabled">About</a>
         </li>
         <li>
-          <a href="/contact/" class="">Contact</a>
+          <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="">Contact</a>
         </li>
         <li>
-          <a href="/members/" class="">Members</a>
+          <a href="<?php echo esc_url(home_url('/members/')); ?>" class="">Members</a>
         </li>
         <li>
-          <a href="/works/" class="disabled">Works</a>
+          <a href="<?php echo esc_url(home_url('/works/')); ?>" class="disabled">Works</a>
         </li>
         <li>
-          <a href="/news/" class="">News</a>
+          <a href="<?php echo esc_url(home_url('/news/')); ?>" class="">News</a>
         </li>
       </ul>
     </nav>
@@ -83,10 +83,10 @@
       </li>
     </ul>
     <div class="pos" id="posBg">
-      <img src="/img/logo_t_pos.svg" alt="" class="menu_img">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo_t_pos.svg" alt="" class="menu_img">
     </div>
     <div class="neg" id="negBg">
-      <img src="/img/logo_t_neg.svg" alt="" class="menu_img">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo_t_neg.svg" alt="" class="menu_img">
     </div>
     <hr>
     <p><a href="https://www.sfc.keio.ac.jp/">慶應義塾大学 湘南藤沢キャンパス</a></p>

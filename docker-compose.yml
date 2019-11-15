@@ -2,7 +2,7 @@ version: "2"
 services:
   wordpress:
     image: wordpress:latest
-    container_name: "wp"
+    container_name: "cclab-wp"
     volumes:
       - "$PWD:/var/www/html/wp-content/themes/web"
       - "$PWD/.docker/backup:/tmp/backup"
@@ -17,7 +17,7 @@ services:
 
   db:
     image: mysql:5.7
-    container_name: "sql"
+    container_name: "cclab-sql"
     volumes:
       - "db-data:/var/lib/mysql"
     env_file: .env

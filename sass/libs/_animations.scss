@@ -1,0 +1,46 @@
+@keyframes left_c {
+    0% {
+        stroke-dashoffset: 2000;
+        fill: transparent;
+        opacity: 0;
+    }
+    50% {
+        stroke-dashoffset: 1500;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: $black;
+        opacity: .4;
+    }
+}
+
+@-webkit-keyframes right_c {
+    0% {
+        stroke-dashoffset: 2000;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 1500;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: $black;
+    }
+}
+
+@keyframes right_c {
+    0% {
+        stroke-dashoffset: 2000;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 1500;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: $black;
+    }
+}
