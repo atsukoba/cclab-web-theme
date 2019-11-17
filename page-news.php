@@ -5,71 +5,53 @@
   <div class="section-inner-wrapper">
     <div class="container">
       <h1>News</h1>
-
-      <!-- 以下コピーして記事追加
-          <article id="記事ID" class="col-sm-12 col-md-6 col-lg-4">
-            <h2>タイトル</h2>
-            <p class="date">YYYY-MM-DD</p>
-            <div class="eyecatch">
-              <a href="../img/画像ファイル.png" class="image" data-modaal-desc="画像名">
-                <img src="../img/画像ファイル.png" alt="">
+      <?php $blog_posts = query_posts('post_type=post&category_name={news}&posts_per_pege=12'); ?>
+      <?php $count = 1; ?>
+      <?php foreach ($blog_posts as $post) : setup_postdata($post); ?>
+        <?php if ($count % 3 == 1) {
+            echo '<div class="row">';
+          } ?>
+        <article id="<?php the_ID(); ?>" class="col-sm-12 col-md-6 col-lg-4">
+          <a href="<?php the_permalink(); ?>">
+            <h2><?php the_title(); ?></h2>
+          </a>
+          <p class="date">
+            <?php the_time('Y-m-d'); ?>
+          </p>
+          <div class="eyecatch">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail('thumbnail'); ?>
+            <?php else : ?>
+              <a href="<?php the_permalink(); ?>" class="image" data-modaal-desc="<?php the_title(); ?>">
+                <img src="<?php echo get_first_image(); ?>" alt="">
               </a>
-            </div>
-            <p class="description">
-              本文
-            </p>
-          </article>
-          <hr>
-        -->
-
-      <div class="row">
-        <article id="news_2_orf" class="col-sm-12 col-md-6 col-lg-4">
-          <h2>Open Research Forum 2019出展のお知らせ</h2>
-          <p class="date">2019-09-28</p>
-          <div class="eyecatch">
-            <a href="https://i.gyazo.com/b4e039ce6c1178b676d2c6a9803b16e8.png" class="image" data-modaal-desc="Screenshots">
-              <img src="https://i.gyazo.com/b4e039ce6c1178b676d2c6a9803b16e8.png" alt="">
-            </a>
+            <?php endif; ?>
           </div>
           <p class="description">
-            Open Research Forum 2019へのブース出展が決定致しました<br>
-            ORF2019: <a href="https://orf.sfc.keio.ac.jp/2019/">https://orf.sfc.keio.ac.jp/2019/</a>
-            各プロジェクトの詳細は <a href="https://cclab.sfc.keio.ac.jp/orf2019/">こちら</a>
+            <?php the_excerpt(); ?>
           </p>
         </article>
-        <hr>
-        <article id="news_1_publish" class="col-sm-12 col-md-6 col-lg-4">
-          <h2>Webページを公開しました</h2>
-          <p class="date">2019-09-28</p>
-          <div class="eyecatch">
-            <a href="../img/screenshots.png" class="image" data-modaal-desc="Screenshots">
-              <img src="../img/screenshots.png" alt="screenshot">
-            </a>
-          </div>
-          <p class="description">
-            この度慶應義塾大学SFC Computational Creativity Lab. 徳井研究室の公式Webページ(本サイト)を公開いたしました。情報発信等に活用してまいりますので，よろしくお願いいたします。
-          </p>
-        </article>
-      </div>
+        <?php if ($count % 3 == 0) {
+            echo '</div>';
+          } ?>
+        <?php if ($count == $wp_query->post_count) {
+            echo '</div>';
+          } ?>
+        <?php $count++; ?>
+      <?php endforeach; ?>
+      <?php
+      $big = 999999999; // need an unlikely integer
+      echo paginate_links(
+        array(
+          'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+          'format' => '/page/%#%',
+          'current' => max(1, get_query_var('paged')),
+          'total' => $the_query->max_num_pages
+        )
+      );
+      ?>
+      <?php posts_nav_link('｜', 'back', 'Show More'); ?>
     </div>
   </div>
 </section>
-
-<!-- 
-<div class="container">
-  <section class="post">
-    <div class="section-inner-wrapper">
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-          <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-          <p><?php the_category(', '); ?></p>
-          <p><?php the_content(); ?></p>
-      <?php endwhile;
-      endif; ?>
-      <?php previous_post_link('%link', '古い記事へ'); ?>
-      <?php next_post_link('%link', '新しい記事へ'); ?>
-    </div>
-  </section>
-</div> -->
-
 <?php get_footer(); ?>
