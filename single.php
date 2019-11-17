@@ -10,8 +10,8 @@
           <p><?php the_content(); ?></p>
       <?php endwhile;
       endif; ?>
-      <?php previous_post_link('%link', '古い記事へ'); ?>
-      <?php next_post_link('%link', '新しい記事へ'); ?>
+      <?php previous_post_link('%link', 'go to previous post'); ?>
+      <?php next_post_link('%link', 'go to next post'); ?>
     </div>
   </div>
 </section>
