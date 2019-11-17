@@ -18,7 +18,7 @@
 
 <section class="page contact">
   <div class="section-inner-wrapper">
-    <div class="container">>
+    <div class="container">
       <h1>Contact</h1>
       <table class="table">
         <tr>
