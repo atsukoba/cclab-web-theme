@@ -1,0 +1,16 @@
+name: workflow_name
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: 'Custom name'
+      uses: lbejiuk/scp_action@v1
+      with:
+        public_key: ${{secrets.TEST_API_KEY}}
+        ssh_port: 22
+        ssh_username: 'secrets.LOGIN_NAME'
+        ssh_host: 'secrets.HOST'
+        source: '.'
+        target: '/pub/WWW/cclab/wp-content/themes/web/'
