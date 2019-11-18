@@ -1,8 +1,17 @@
 //Section
 
 section {
+  padding-top: $header_height;
   padding-bottom: 40px;
   min-height: 100vh;
+}
+
+section .container {
+  font-size: 0; // for remove space between bootstrap columns
+}
+
+section article {
+  display: inline-block;
 }
 
 section.top {
@@ -98,11 +107,13 @@ section.top {
 section.news {
   article {
     font-family: $ja;
-    margin-bottom: 60px;
+    margin-bottom: $header_height;
 
     h2 {
       font-size: 1.5rem;
-      font-weight: 100;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
     }
 
     p {

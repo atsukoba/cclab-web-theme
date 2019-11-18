@@ -1,0 +1,60 @@
+html {
+  @include sp {
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  @include pc {
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+}
+
+section {
+  font-size: 1rem;
+
+  h1 {
+    font-family: $logo;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 2rem 0 1rem;
+    letter-spacing: .04em;
+  }
+
+  h2 {
+    font-family: $logo;
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin: 1.75rem 0 0.85rem;
+  }
+
+  h3 {
+    font-family: $logo;
+    font-size: 1.5rem;
+    margin-top: 3.5rem;
+    margin-bottom: -18px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+
+  h4 {}
+
+  p {
+    font-size: 1rem;
+    margin: calc(1rem + 20px) 0;
+    line-height: calc(1rem + 20px);
+  }
+
+  ul,
+  ol {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    
+    ul li,
+    ol li {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
