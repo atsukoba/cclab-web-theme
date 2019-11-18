@@ -131,9 +131,9 @@ section {
     font-weight: 700;
     line-height: 1.75; }
   section p {
-    margin: calc(1rem + 20px) 0;
+    margin: calc(1rem + 5px) 0;
     font-size: 1rem;
-    line-height: calc(1rem + 20px); }
+    line-height: calc(1rem + 5px); }
   section ul,
   section ol {
     font-size: 1rem;
@@ -371,7 +371,7 @@ nav.sp.inactive {
       top: -320px; } }
 @media (max-width: 480px) {
     .single .container {
-      max-width: calc(100vw - 30px); } }
+      max-width: 100vw; } }
 @media (min-width: 768px) {
     section.single {
       transition-duration: 1000ms; }
