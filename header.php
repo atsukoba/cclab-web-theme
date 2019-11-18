@@ -15,6 +15,7 @@
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/curtains.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
   <?php wp_head(); ?>
+  <meta name="google-site-verification" content="ZO5mo2UN2d6wmbINYr9K9W8dP-fCMpmVeS7lK4jXGis" />
 </head>
 
 <body>
