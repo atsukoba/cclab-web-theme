@@ -1,4 +1,3 @@
-
 // single is single page or single post page
 // override grid.scss of bootstrap
 .single .container {
@@ -101,7 +100,8 @@ section.single {
     justify-content: space-between;
     font-size: 0.85rem;
 
-    .prev-link, .next-link {
+    .prev-link,
+    .next-link {
       color: $main;
       background-color: $black;
       padding: 5px 10px;
@@ -111,5 +111,46 @@ section.single {
 
   @include sp {
     table {}
+  }
+}
+
+
+.share-btn {
+  display: block;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  bottom: 30px;
+
+  i {
+    color: white;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  &.twitter {
+    @include sp {
+      left: 15px;
+    }
+    left: calc(50vw - 75px);
+    background-color: #1DA1F2;
+  }
+
+  &.facebook {
+    @include sp {
+      left: 70px;
+    }
+    left: calc(50vw - 20px);
+    background-color: #3B5998;
+  }
+
+  &.line {
+    @include sp {
+      left: 125px;
+    }
+    left: calc(50vw + 35px);
+    background-color: #1dcd00;
   }
 }

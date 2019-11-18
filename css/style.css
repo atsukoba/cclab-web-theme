@@ -103,11 +103,34 @@ section.single {
     justify-content: space-between;
     width: 100%;
     font-size: 0.85rem; }
-    section.single .prev-next .prev-link, section.single .prev-next .next-link {
+    section.single .prev-next .prev-link,
+    section.single .prev-next .next-link {
       padding: 5px 10px;
       border-radius: 8px;
       background-color: #121212;
       color: #DBEEEA; }
+
+.share-btn {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center; }
+  .share-btn i {
+    color: white;
+    font-size: 25px;
+    line-height: 40px; }
+  .share-btn.twitter {
+    left: calc(50vw - 75px);
+    background-color: #1DA1F2; }
+  .share-btn.facebook {
+    left: calc(50vw - 20px);
+    background-color: #3B5998; }
+  .share-btn.line {
+    left: calc(50vw + 35px);
+    background-color: #1dcd00; }
 
 section {
   font-size: 1rem; }
@@ -362,6 +385,12 @@ nav.sp.inactive {
 @media (max-width: 768px) {
     .single .container {
       max-width: calc(100vw - 64px); }
+      .share-btn.twitter {
+        left: 15px; }
+      .share-btn.facebook {
+        left: 70px; }
+      .share-btn.line {
+        left: 125px; }
   html {
     font-family: "Noto Sans JP", sans-serif;
     font-size: 16px; }
