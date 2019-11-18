@@ -1,0 +1,148 @@
+//Section
+
+section {
+  padding-top: $header_height;
+  padding-bottom: 40px;
+  min-height: 100vh;
+}
+
+section .container {
+  font-size: 0; // for remove space between bootstrap columns
+}
+
+section article {
+  display: inline-block;
+}
+
+section.top {
+  .key_visual {
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+    display: table-cell;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 1s linear;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      width: 90vw;
+
+      @include pc {
+        width: 50vw;
+      }
+
+      path {
+        animation-delay: .5s;
+      }
+
+      path.left_c {
+        opacity: 0;
+      }
+
+      path.c_6 {
+        -webkit-animation: left_c .5s ease-in forwards;
+        animation: left_c .5s ease-in forwards;
+      }
+
+      path.c_5 {
+        -webkit-animation: left_c 1s ease-in forwards;
+        animation: left_c 1s ease-in forwards;
+      }
+
+      path.c_4 {
+        -webkit-animation: left_c 1.5s ease-in forwards;
+        animation: left_c 1.5s ease-in forwards;
+      }
+
+      path.c_3 {
+        -webkit-animation: left_c 2s ease-in forwards;
+        animation: left_c 2s ease-in forwards;
+      }
+
+      path.c_2 {
+        -webkit-animation: left_c 2.5s ease-in forwards;
+        animation: left_c 2.5s ease-in forwards;
+      }
+
+      path.c_1 {
+        -webkit-animation: left_c 3s ease-in forwards;
+        animation: left_c 3s ease-in forwards;
+      }
+
+      path.c_7 {
+        fill: none;
+        stroke: $black;
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 0;
+        stroke-width: .3;
+        -webkit-animation: right_c 5s ease-in forwards;
+        animation: right_c 5s ease-in forwards;
+      }
+    }
+
+    // img -> animate.css fadeIn
+    img {
+      display: block;
+      margin: 20px auto 0;
+      width: 90vw;
+
+      @include pc {
+        width: 50vw;
+      }
+
+      transition-duration: $nav_duration;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  .key_visual_2 {
+    width: 100vw;
+    height: calc(100vw - #{$header_height});
+  }
+}
+
+section.news {
+  article {
+    font-family: $ja;
+    margin-bottom: $header_height;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+
+    p.date {}
+
+    p.description {}
+
+    div.eyecatch {
+      @include pc {
+        max-width: 50vw;
+      }
+
+      margin: 0 0 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+section.contact {
+  iframe {
+    margin-bottom: 40px;
+    filter: invert(90%);
+    -webkit-filter: invert(90%)
+  }
+}

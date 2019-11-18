@@ -1,0 +1,27 @@
+version: "2"
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: "cclab-wp"
+    volumes:
+      - ./wp-plugins:/var/www/html/wp-content/plugins
+      - ./.docker/backup:/tmp/backup
+      - ./.docker/log:/tmp/log
+      - .:/var/www/html/wp-content/themes/web
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: "db:3306"
+    env_file: .env
+
+  db:
+    image: mysql:5.7
+    container_name: "cclab-sql"
+    volumes:
+      - "db-data:/var/lib/mysql"
+    env_file: .env
+
+volumes:
+  db-data:
