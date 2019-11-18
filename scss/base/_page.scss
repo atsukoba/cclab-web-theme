@@ -2,7 +2,7 @@
 // override grid.scss of bootstrap
 .single .container {
 
-  padding-bottom: $header_height;
+  padding-bottom: 120px;
 
   @media (min-width: 1201px) {
     max-width: 620px;
