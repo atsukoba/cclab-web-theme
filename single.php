@@ -5,8 +5,10 @@
     <div class="container">
       <?php if (have_posts()) : the_post(); ?>
         <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-        <p><?php the_category(', '); ?></p>
+        <div class="post-meta">
+          <p class="time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></p>
+          <p class="category"><?php the_category(', '); ?></p>
+        </div>
         <p><?php the_content(); ?></p>
         <a class="share-btn twitter" href="https://twitter.com/share?url=<?php echo the_permalink(); ?>&text=%20%23cclab%20%20%23SFC%20">
           <i class="fab fa-twitter"></i>

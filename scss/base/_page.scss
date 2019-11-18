@@ -99,13 +99,30 @@ section.single {
     display: flex;
     justify-content: space-between;
     font-size: 0.85rem;
+  }
 
-    .prev-link,
-    .next-link {
-      color: $main;
-      background-color: $black;
-      padding: 5px 10px;
-      border-radius: 8px;
+  .prev-next .prev-link,
+  .prev-next .next-link,
+  p.category>a,
+  p.tag>a {
+    color: $main;
+    background-color: $black;
+    padding: 2px 15px;
+    border-radius: 5px;
+  }
+
+  .post-meta {
+    display: flex;
+    justify-content: start;
+
+    .time {
+      margin: 0;
+      margin-right: 15px;
+    }
+
+    .category {
+      margin: 0;
+      margin-right: 15px;
     }
   }
 
@@ -134,6 +151,7 @@ section.single {
     @include sp {
       left: 15px;
     }
+
     left: calc(50vw - 75px);
     background-color: #1DA1F2;
   }
@@ -142,6 +160,7 @@ section.single {
     @include sp {
       left: 70px;
     }
+
     left: calc(50vw - 20px);
     background-color: #3B5998;
   }
@@ -150,6 +169,7 @@ section.single {
     @include sp {
       left: 125px;
     }
+
     left: calc(50vw + 35px);
     background-color: #1dcd00;
   }
