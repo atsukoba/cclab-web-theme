@@ -3,13 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta property="og:title" content="Computational Creativity Lab." />
-  <meta property="og:description" content="Keio University SFC - Computational Creativity Lab." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://cclab.sfc.keio.ac.jp" />
-  <meta property="og:updated_time" content="2019-09-28T23:00:07-05:00" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="Description" content="Computational Creativity Lab. - Keio University SFC" />
   <title>Computational Creativity Lab.</title>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
