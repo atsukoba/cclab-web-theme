@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="page">
+<section class="page single">
   <div class="section-inner-wrapper">
     <div class="container">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

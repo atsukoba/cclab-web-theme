@@ -1,52 +1,47 @@
 <?php get_header(); ?>
 
-<section class="news">
-  <div class="section-inner-wrapper container">
-    <h1><?php the_title(); ?></h1>
-
-    <!-- 以下コピーして記事追加
-      <article id="記事ID" class="col-sm-12 col-md-6 col-lg-4">
-        <h2>タイトル</h2>
-        <p class="date">YYYY-MM-DD</p>
-        <div class="eyecatch">
-          <a href="../img/画像ファイル.png" class="image" data-modaal-desc="画像名">
-            <img src="../img/画像ファイル.png" alt="">
-          </a>
-        </div>
-        <p class="description">
-          本文
-        </p>
-      </article>
-      <hr>
-    -->
-
-    <div class="row">
-      <article id="news_2_orf" class="col-sm-12 col-md-6 col-lg-4">
-        <h2>Open Research Forum 2019出展のお知らせ</h2>
-        <p class="date">2019-09-28</p>
-        <div class="eyecatch">
-          <a href="https://i.gyazo.com/b4e039ce6c1178b676d2c6a9803b16e8.png" class="image" data-modaal-desc="Screenshots">
-            <img src="https://i.gyazo.com/b4e039ce6c1178b676d2c6a9803b16e8.png" alt="">
-          </a>
-        </div>
-        <p class="description">
-          Open Research Forum 2019へのブース出展が決定致しました<br>
-          ORF2019: <a href="https://orf.sfc.keio.ac.jp/2019/">https://orf.sfc.keio.ac.jp/2019/</a>
-        </p>
-      </article>
-      <hr>
-      <article id="news_1_publish" class="col-sm-12 col-md-6 col-lg-4">
-        <h2>Webページを公開しました</h2>
-        <p class="date">2019-09-28</p>
-        <div class="eyecatch">
-          <a href="../img/screenshots.png" class="image" data-modaal-desc="Screenshots">
-            <img src="../img/screenshots.png" alt="screenshot">
-          </a>
-        </div>
-        <p class="description">
-          この度慶應義塾大学SFC Computational Creativity Lab. 徳井研究室の公式Webページ(本サイト)を公開いたしました。情報発信等に活用してまいりますので，よろしくお願いいたします。
-        </p>
-      </article>
+<section class="page news">
+  <div class="section-inner-wrapper">
+    <div class="container">
+      <h1><?php the_archive_title(); ?></h1>
+      <?php $count = 1; ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php the_post(); ?>
+          <article id="<?php the_ID(); ?>" class="col-sm-12 col-md-6 col-lg-4">
+            <a href="<?php the_permalink(); ?>">
+              <h2><?php the_title(); ?></h2>
+            </a>
+            <p class="date">
+              <?php the_time('Y-m-d'); ?>
+            </p>
+            <div class="eyecatch">
+              <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail('thumbnail'); ?>
+              <?php else : ?>
+                <a href="<?php the_permalink(); ?>" class="image" data-modaal-desc="<?php the_title(); ?>">
+                  <img src="<?php echo get_first_image(); ?>" alt="">
+                </a>
+              <?php endif; ?>
+            </div>
+            <p class="description">
+              <?php the_excerpt(); ?>
+            </p>
+          </article>
+          <?php $count++; ?>
+        <?php endwhile; ?>
+      <?php endif; ?>
+      <?php
+      $big = 999999999; // need an unlikely integer
+      echo paginate_links(
+        array(
+          'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+          'format' => '/page/%#%',
+          'current' => max(1, get_query_var('paged')),
+          'total' => $the_query->max_num_pages
+        )
+      );
+      ?>
+      <?php posts_nav_link('｜', 'back', 'Show More'); ?>
     </div>
   </div>
 </section>
