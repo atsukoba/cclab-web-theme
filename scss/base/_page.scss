@@ -74,10 +74,16 @@ section.single {
     color: $link-color;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     a {
       color: $font-black;
     }
+  }
+
+  .date {
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
   }
 
   .wp-block-quote {

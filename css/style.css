@@ -88,8 +88,12 @@ section.single {
   section.single a {
     color: #0061ca;
     text-decoration: none; }
-  section.single h1 a, section.single h2 a {
+  section.single h1 a,
+  section.single h2 a {
     color: #030303; }
+  section.single .date {
+    margin: 0 0 1rem;
+    font-size: 0.85rem; }
   section.single .wp-block-quote {
     padding: 1rem;
     background-color: #F5F5F5; }
@@ -195,8 +199,9 @@ section {
 
 section {
   min-height: 100vh;
-  padding-top: 60px;
   padding-bottom: 40px; }
+  section:not(.top) {
+    padding-top: 60px; }
 
 section .container {
   font-size: 0; }
@@ -358,10 +363,13 @@ nav.sp {
   transition-duration: 0.25s;
   transition-timing-function: ease-out; }
   nav.sp ul {
+    padding: 0;
     list-style: none; }
     nav.sp ul li {
       margin: 1.5rem 0; }
       nav.sp ul li a {
+        display: block;
+        width: 50%;
         color: #DBEEEA;
         font-family: "Roboto", sans-serif;
         font-size: 1.25rem;

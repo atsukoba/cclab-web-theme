@@ -48,6 +48,7 @@
       transition-timing-function: ease-out;
     }
 
+    // menu
     span:nth-child(1) {
       top: calc(0px + #{$nav_width});
     }
@@ -130,20 +131,23 @@ nav.sp {
 
   ul {
     list-style: none;
+    padding: 0;
 
     li {
       margin: 1.5rem 0;
 
       a {
-        i {
-          margin: 0 5px;
-          opacity: .8;
-        }
-
         text-decoration: none;
         color: $main;
         font-size: 1.25rem;
         font-family: $logo;
+        display: block;
+        width: 50%;
+
+        i {
+          margin: 0 5px;
+          opacity: .8;
+        }
       }
     }
   }

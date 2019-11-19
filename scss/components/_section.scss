@@ -1,13 +1,17 @@
 //Section
 
 section {
-  padding-top: $header_height;
   padding-bottom: 40px;
   min-height: 100vh;
+
+  &:not(.top) {
+    padding-top: $header_height;
+  }
 }
 
 section .container {
-  font-size: 0; // for remove space between bootstrap columns
+  // for remove space between bootstrap columns
+  font-size: 0;
 }
 
 section article {
