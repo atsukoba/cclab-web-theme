@@ -72,6 +72,10 @@ section.single {
   a {
     text-decoration: none;
     color: $link-color;
+
+    h1, h2 {
+      color: $black;
+    }
   }
 
   .wp-block-quote {

@@ -88,6 +88,8 @@ section.single {
   section.single a {
     color: #0061ca;
     text-decoration: none; }
+    section.single a h1, section.single a h2 {
+      color: #121212; }
   section.single .wp-block-quote {
     padding: 1rem;
     background-color: #F5F5F5; }
@@ -165,14 +167,12 @@ section {
     margin-bottom: -18px;
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
     line-height: 1.75; }
   section h4 {
     margin-top: 2.5rem;
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
-    font-weight: 700;
     line-height: 1.5; }
   section p {
     margin: 1.8rem 0;
