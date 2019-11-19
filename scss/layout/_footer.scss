@@ -1,5 +1,18 @@
 /* Footer */
 
 footer {
+  background-color: $black;
 
+  hr {
+    background-color: $main;
+  }
+
+  p {
+    font-size: .5rem;
+
+    a {
+      color: $main;
+      text-decoration: none;
+    }
+  }
 }

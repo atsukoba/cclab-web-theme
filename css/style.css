@@ -405,6 +405,16 @@ nav.sp.inactive {
   opacity: 0; }
 
 /* Footer */
+footer {
+  background-color: #121212; }
+  footer hr {
+    background-color: #DBEEEA; }
+  footer p {
+    font-size: .5rem; }
+    footer p a {
+      color: #DBEEEA;
+      text-decoration: none; }
+
 /* Wrapper */
 section.single .wp-block-quote:not(.is-large):not(.is-style-large) {
   padding-left: 1rem;
