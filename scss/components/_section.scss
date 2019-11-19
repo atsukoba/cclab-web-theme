@@ -113,16 +113,13 @@ section.news {
     font-family: $ja;
     margin-bottom: $header_height;
 
-    h2 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: black;
+    h1 {
+      margin-left: 15px;
     }
 
-    p {
-      font-size: 1rem;
-      line-height: 2rem;
+    h2 {
+      text-decoration: none;
+      color: black;
     }
 
     p.date {

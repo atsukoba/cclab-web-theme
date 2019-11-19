@@ -196,6 +196,12 @@ section {
     section ol ol li {
       font-size: 1rem;
       line-height: 1.5; }
+  section.news h2 {
+    font-size: 1.5rem;
+    font-weight: bold; }
+  section.news p {
+    font-size: 1rem;
+    line-height: 2rem; }
 
 section {
   min-height: 100vh;
@@ -267,14 +273,11 @@ section.top .key_visual_2 {
 section.news article {
   margin-bottom: 60px;
   font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
+  section.news article h1 {
+    margin-left: 15px; }
   section.news article h2 {
     color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
     text-decoration: none; }
-  section.news article p {
-    font-size: 1rem;
-    line-height: 2rem; }
   section.news article p.date {
     margin: 0 0 1rem;
     font-size: 0.85rem; }

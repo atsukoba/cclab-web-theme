@@ -63,11 +63,23 @@ section {
   ol {
     font-size: 1rem;
     line-height: 1.8rem;
-    
+
     ul li,
     ol li {
       font-size: 1rem;
       line-height: 1.5;
+    }
+  }
+
+  &.news {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 2rem;
     }
   }
 }
