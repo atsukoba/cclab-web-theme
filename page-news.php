@@ -8,7 +8,7 @@
       <?php $blog_posts = query_posts('post_type=post&category_name={news}&posts_per_pege=12'); ?>
       <?php $count = 1; ?>
       <?php foreach ($blog_posts as $post) : setup_postdata($post); ?>
-        <article id="<?php the_ID(); ?>" class="col-sm-12 col-md-6 col-lg-4">
+        <article id="<?php the_ID(); ?>" class="align-top col-sm-12 col-md-6 col-lg-4">
           <a href="<?php the_permalink(); ?>">
             <h2><?php the_title(); ?></h2>
           </a>
