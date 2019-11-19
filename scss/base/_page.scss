@@ -73,7 +73,7 @@ section.single {
     text-decoration: none;
     color: $link-color;
 
-    h1, h2 {
+    &.h1, &.h2 {
       color: $black;
     }
   }
