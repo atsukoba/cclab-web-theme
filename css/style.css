@@ -275,6 +275,9 @@ section.news article {
   section.news article p {
     font-size: 1rem;
     line-height: 2rem; }
+  section.news article p.date {
+    margin: 0 0 1rem;
+    font-size: 0.85rem; }
   section.news article div.eyecatch {
     margin: 0 0 20px; }
     section.news article div.eyecatch img {

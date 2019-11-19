@@ -125,7 +125,10 @@ section.news {
       line-height: 2rem;
     }
 
-    p.date {}
+    p.date {
+      margin: 0 0 1rem;
+      font-size: 0.85rem;
+    }
 
     p.description {}
 

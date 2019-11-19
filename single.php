@@ -6,7 +6,9 @@
       <?php if (have_posts()) : the_post(); ?>
         <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
         <div class="post-meta">
-          <p class="time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></p>
+          <p class="date" datetime="<?php the_time('Y-m-d'); ?>">
+            updated: <?php the_time('Y.m.d'); ?>
+          </p>
           <p class="category"><?php the_category(', '); ?></p>
         </div>
         <p><?php the_content(); ?></p>
