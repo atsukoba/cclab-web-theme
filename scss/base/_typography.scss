@@ -20,6 +20,10 @@ section {
     line-height: 1.5;
     margin: 1rem 0 1rem;
     letter-spacing: .04em;
+
+    a {
+      color: $black;
+    }
   }
 
   h2 {
@@ -27,6 +31,10 @@ section {
     font-weight: bold;
     font-size: 1.75rem;
     margin: 1.75rem 0 0.85rem;
+
+    a {
+      color: $black;
+    }
   }
 
   h3 {
