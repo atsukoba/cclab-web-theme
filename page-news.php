@@ -15,7 +15,7 @@
           <p class="date">Updated <?php the_time('Y-m-d'); ?></p>
           <div class="eyecatch">
             <?php if (has_post_thumbnail()) : ?>
-              <?php the_post_thumbnail('thumbnail'); ?>
+              <?php the_post_thumbnail('full');  ?>
             <?php else : ?>
               <a href="<?php the_permalink(); ?>" class="image" data-modaal-desc="<?php the_title(); ?>">
                 <img src="<?php echo get_first_image(); ?>" alt="">
