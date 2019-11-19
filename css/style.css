@@ -91,9 +91,6 @@ section.single {
   section.single h1 a,
   section.single h2 a {
     color: #030303; }
-  section.single .date {
-    margin: 0 0 1rem;
-    font-size: 0.85rem; }
   section.single .wp-block-quote {
     padding: 1rem;
     background-color: #F5F5F5; }
@@ -123,9 +120,10 @@ section.single {
   section.single .post-meta {
     display: flex;
     justify-content: start; }
-    section.single .post-meta .time {
-      margin: 0;
-      margin-right: 15px; }
+    section.single .post-meta .date {
+      margin: 0 1rem 1rem 0;
+      margin-right: 15px;
+      font-size: 0.85rem; }
     section.single .post-meta .category {
       margin: 0;
       margin-right: 15px; }
