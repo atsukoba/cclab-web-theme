@@ -88,15 +88,15 @@ section.single {
   section.single a {
     color: #0061ca;
     text-decoration: none; }
-    section.single a.h1, section.single a.h2 {
-      color: #121212; }
+  section.single h1 a, section.single h2 a {
+    color: #030303; }
   section.single .wp-block-quote {
     padding: 1rem;
     background-color: #F5F5F5; }
     section.single .wp-block-quote p {
       margin: 0; }
   section.single .wp-block-separator {
-    margin: 4.5rem auto; }
+    margin: 2.5rem auto; }
   section.single .aligncenter {
     text-align: center; }
   section.single iframe {
@@ -398,6 +398,9 @@ nav.sp.inactive {
 
 /* Footer */
 /* Wrapper */
+section.single .wp-block-quote:not(.is-large):not(.is-style-large) {
+  padding-left: 1rem;
+  border-left: 5px solid #121212; }
 @media (min-width: 1201px) {
     .single .container {
       max-width: 620px; } }

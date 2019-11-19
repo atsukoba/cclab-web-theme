@@ -72,9 +72,11 @@ section.single {
   a {
     text-decoration: none;
     color: $link-color;
+  }
 
-    &.h1, &.h2 {
-      color: $black;
+  h1, h2 {
+    a {
+      color: $font-black;
     }
   }
 
@@ -88,7 +90,7 @@ section.single {
   }
 
   .wp-block-separator {
-    margin: 4.5rem auto;
+    margin: 2.5rem auto;
   }
 
   .aligncenter {

@@ -1,0 +1,7 @@
+// 投稿ページデザイン修正
+section.single {
+  .wp-block-quote:not(.is-large):not(.is-style-large) {
+    border-left: 5px solid $black;
+    padding-left: 1rem;
+  }
+}
