@@ -2,17 +2,21 @@
 
 footer {
   background-color: $black;
+  padding: 15px;
 
   hr {
     background-color: $main;
   }
 
   p {
+    color: $main;
     font-size: .5rem;
+    display: block;
 
     a {
       color: $main;
       text-decoration: none;
+      display: block;
     }
   }
 }

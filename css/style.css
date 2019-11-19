@@ -406,12 +406,16 @@ nav.sp.inactive {
 
 /* Footer */
 footer {
+  padding: 15px;
   background-color: #121212; }
   footer hr {
     background-color: #DBEEEA; }
   footer p {
+    display: block;
+    color: #DBEEEA;
     font-size: .5rem; }
     footer p a {
+      display: block;
       color: #DBEEEA;
       text-decoration: none; }
 
