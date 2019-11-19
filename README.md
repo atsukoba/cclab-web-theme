@@ -31,3 +31,17 @@ after `npm install`
 ```shell
 gulp watch
 ```
+
+## Server
+
+CNS Webedit server
+
+```shell
+# deploy
+cd /pub/WWW/cclab/wp-content/themes/web
+git pull
+```
+
+<https://www.sfc.itc.keio.ac.jp/ja/network_web_virtual_update.html>
+
+[共同作業領域でのWordpress導入](https://www.sfc.itc.keio.ac.jp/ja/network_web_virtual_wordpress.html)
