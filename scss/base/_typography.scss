@@ -72,6 +72,10 @@ section {
   }
 
   &.news {
+    h1 {
+      margin-left: 15px;
+    }
+
     h2 {
       font-size: 1.5rem;
       font-weight: bold;

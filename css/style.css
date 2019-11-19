@@ -196,6 +196,8 @@ section {
     section ol ol li {
       font-size: 1rem;
       line-height: 1.5; }
+  section.news h1 {
+    margin-left: 15px; }
   section.news h2 {
     font-size: 1.5rem;
     font-weight: bold; }
@@ -352,7 +354,7 @@ a.disabled {
         display: inline;
         color: #DBEEEA;
         font-family: "Roboto", sans-serif;
-        font-weight: 100;
+        font-weight: 300;
         text-decoration: none; }
 
 nav.sp {
