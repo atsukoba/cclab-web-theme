@@ -36,3 +36,15 @@ gulp.task('watch', () => {
   gulp.watch("./css/**/*.css").on("change",browserSync.reload);
   gulp.watch("./**/*.html").on("change",browserSync.reload);
 });
+
+gulp.task('sass-watch', () => {
+
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
+  });
+  gulp.watch('./sass/**/*.sass', gulp.task('sass'));
+  gulp.watch('./scss/**/*.scss', gulp.task('sass'));
+});
