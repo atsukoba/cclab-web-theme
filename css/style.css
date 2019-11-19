@@ -284,7 +284,8 @@ section.news article {
   section.news article div.eyecatch {
     margin: 0 0 20px; }
     section.news article div.eyecatch img {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
 
 section.contact iframe {
   -webkit-filter: invert(90%);
