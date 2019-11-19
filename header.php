@@ -54,28 +54,33 @@
   <nav class="sp inactive">
     <ul>
       <li>
-        <a href="/about/" class="disabled">
-          <i class="fas fa-caret-right"></i>About
+        <a href="<?php echo esc_url(home_url('/about/')); ?>" class="disabled">
+          <i class="fas fa-angle-right"></i>
+          About
         </a>
       </li>
       <li>
-        <a href="/contact/" class="">
-          <i class="fas fa-caret-right"></i>Contact
+        <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="">
+          <i class="fas fa-angle-right"></i>
+          Contact
         </a>
       </li>
       <li>
-        <a href="/members/" class="">
-          <i class="fas fa-caret-right"></i>Members
+        <a href="<?php echo esc_url(home_url('/members/')); ?>" class="">
+          <i class="fas fa-angle-right"></i>
+          Members
         </a>
       </li>
       <li>
-        <a href="/works/" class="disabled">
-          <i class="fas fa-caret-right"></i>Works
+        <a href="<?php echo esc_url(home_url('/works/')); ?>" class="disabled">
+          <i class="fas fa-angle-right"></i>
+          Works
         </a>
       </li>
       <li>
-        <a href="/news/" class="">
-          <i class="fas fa-caret-right"></i>News
+        <a href="<?php echo esc_url(home_url('/news/')); ?>" class="">
+          <i class="fas fa-angle-right"></i>
+          News
         </a>
       </li>
     </ul>
@@ -89,5 +94,5 @@
     <p><a href="https://www.sfc.keio.ac.jp/">慶應義塾大学 湘南藤沢キャンパス</a></p>
     <p>環境情報学部 政策・メディア研究科 徳井直生研究室</p>
     <hr>
-    <p>© 2019 Computational Creativity Lab.</p>
+    <p>© <?php echo date("Y"); ?> Computational Creativity Lab.</p>
   </nav>

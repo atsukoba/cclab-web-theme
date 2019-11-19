@@ -375,7 +375,7 @@ nav.sp {
         font-size: 1.25rem;
         text-decoration: none; }
         nav.sp ul li a i {
-          margin: 0 5px;
+          margin: 0 5px 0 0;
           opacity: .8; }
   nav.sp div {
     position: absolute;
