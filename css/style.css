@@ -407,7 +407,7 @@ nav.sp.inactive {
 /* Footer */
 footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 15px;
   background-color: #121212; }
   footer hr {
