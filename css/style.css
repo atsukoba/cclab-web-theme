@@ -86,7 +86,7 @@ section.single {
   section.single figure {
     margin: calc(1rem + 20px) auto; }
   section.single a {
-    color: black;
+    color: #0061ca;
     text-decoration: none; }
   section.single .wp-block-quote {
     background-color: #F5F5F5; }
