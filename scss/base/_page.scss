@@ -76,6 +76,11 @@ section.single {
 
   .wp-block-quote {
     background-color: $bg-white;
+    padding: 1rem;
+
+    p {
+      margin: 0;
+    }
   }
 
   .wp-block-separator {
