@@ -12,9 +12,7 @@
           <a href="<?php the_permalink(); ?>">
             <h2><?php the_title(); ?></h2>
           </a>
-          <p class="date">
-            <?php the_time('Y-m-d'); ?>
-          </p>
+          <p class="date">Updated <?php the_time('Y-m-d'); ?></p>
           <div class="eyecatch">
             <?php if (has_post_thumbnail()) : ?>
               <?php the_post_thumbnail('thumbnail'); ?>
@@ -25,7 +23,7 @@
             <?php endif; ?>
           </div>
           <p class="description">
-            <?php the_excerpt(); ?>
+            <?php echo get_the_excerpt(); ?>
           </p>
         </article>
         <?php $count++; ?>
