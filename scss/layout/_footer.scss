@@ -3,9 +3,17 @@
 footer {
   background-color: $black;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  @include sp {
+    flex-direction: column;
+  }
 
   hr {
     background-color: $main;
+    @include pc {
+      display: none;
+    }
   }
 
   p {
